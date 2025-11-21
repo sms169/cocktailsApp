@@ -1,0 +1,50 @@
+#----------------------------------------------------------------------
+# Android specific
+#----------------------------------------------------------------------
+
+# Built application files
+*.apk
+*.aab
+*.aar
+
+# Files for the Dalvik VM, generated inside the 'build' directory
+*.dex
+
+# Build output and temporary files
+build/
+.gradle/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# Gradle files
+# The .gradle folder contains user-specific and build-related cache
+.gradle-version
+.gradle/
+
+# IntelliJ / Android Studio files
+# .idea contains user-specific settings
+.idea/
+# These are local/user-specific settings
+*.iml
+*.iws
+*.ipr
+*.rc
+captures/
+
+# Keystore and signing files (DO NOT COMMIT!)
+*.keystore
+*.jks
+secrets.properties
+
+# Crashlytics/Firebase files
+crashlytics.properties
+
+# Test and coverage report files
+/coverage.html
+/Jacoco*.xml
+
+# macOS specific files
+.DS_Store
+
+# End of standard Android .gitignore
