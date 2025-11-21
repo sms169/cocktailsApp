@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.cocktails.ui.screens.CocktailDetailScreen
 import com.example.cocktails.ui.screens.CocktailListScreen
 import com.example.cocktails.ui.screens.IngredientInputScreen
+import com.example.cocktails.ui.screens.SplashScreen
 import com.example.cocktails.ui.theme.CocktailAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +22,16 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val viewModel: CocktailViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 
-                NavHost(navController = navController, startDestination = "input") {
+                NavHost(navController = navController, startDestination = "splash") {
+                    composable("splash") {
+                        SplashScreen(
+                            onAnimationFinished = {
+                                navController.navigate("input") {
+                                    popUpTo("splash") { inclusive = true }
+                                }
+                            }
+                        )
+                    }
                     composable("input") {
                         IngredientInputScreen(
                             currentDataSource = viewModel.currentDataSource,
