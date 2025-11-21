@@ -47,6 +47,35 @@ class GeminiDataSource : CocktailDataSource {
         }
     }
 
+    override suspend fun searchCocktailsByName(name: String): List<Cocktail> {
+        val prompt = """
+            Find cocktail recipes that match the name "$name".
+            Provide a list of up to 5 cocktails.
+            For each cocktail, provide:
+            - Name
+            - List of ingredients with measurements
+            - Instructions
+            - Estimated calories (integer)
+            - A short history or fun fact (1-2 sentences)
+            - A popularity score (1-100)
+            - A rating (1.0-5.0)
+            
+            Return the response as a JSON array of objects with keys: name, ingredients, instructions, calories, history, popularity, rating.
+            Do not include markdown formatting like ```json.
+        """.trimIndent()
+
+        return try {
+            val response = generativeModel.generateContent(prompt)
+            val jsonString = response.text?.trim()?.removePrefix("```json")?.removePrefix("```")?.removeSuffix("```") ?: "[]"
+            val cocktails = parseCocktailsJson(jsonString)
+            
+            cocktails
+        } catch (e: Exception) {
+            e.printStackTrace()
+            emptyList()
+        }
+    }
+
     override suspend fun getCocktailById(id: String): Cocktail? {
         // Gemini generates cocktails on the fly, so we can't easily "fetch" one by ID later 
         // unless we cache them. For simplicity, we'll just return null or handle it in the UI.

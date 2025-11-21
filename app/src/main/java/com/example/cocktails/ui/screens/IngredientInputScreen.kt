@@ -18,7 +18,8 @@ import com.example.cocktails.data.DataSourceType
 fun IngredientInputScreen(
     currentDataSource: DataSourceType,
     onDataSourceSelected: (DataSourceType) -> Unit,
-    onFindCocktails: (List<String>) -> Unit
+    onFindCocktails: (List<String>) -> Unit,
+    onFindCocktailsByName: (String) -> Unit
 ) {
     var currentIngredient by remember { mutableStateOf("") }
     var ingredients by remember { mutableStateOf(listOf<String>()) }
@@ -147,6 +148,76 @@ fun IngredientInputScreen(
             ) {
                 Text("Find Cocktails")
             }
+
+            Spacer(modifier = Modifier.height(24.dp))
+        
+        Divider()
+        
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Text(
+            text = "Or Search by Name",
+            style = MaterialTheme.typography.titleMedium
+        )
+        
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            var nameExpanded by remember { mutableStateOf(false) }
+            var cocktailName by remember { mutableStateOf("") }
+            val filteredNames = com.example.cocktails.data.TopCocktails.list.filter {
+                it.contains(cocktailName, ignoreCase = true) && it != cocktailName
+            }
+
+            ExposedDropdownMenuBox(
+                expanded = nameExpanded,
+                onExpandedChange = { nameExpanded = !nameExpanded },
+                modifier = Modifier.weight(1f)
+            ) {
+                OutlinedTextField(
+                    value = cocktailName,
+                    onValueChange = { 
+                        cocktailName = it
+                        nameExpanded = true
+                    },
+                    label = { Text("Cocktail Name") },
+                    modifier = Modifier.menuAnchor().fillMaxWidth(),
+                    singleLine = true,
+                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = nameExpanded) },
+                    colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors()
+                )
+                
+                if (filteredNames.isNotEmpty()) {
+                    ExposedDropdownMenu(
+                        expanded = nameExpanded,
+                        onDismissRequest = { nameExpanded = false }
+                    ) {
+                        filteredNames.take(5).forEach { selectionOption ->
+                            DropdownMenuItem(
+                                text = { Text(selectionOption) },
+                                onClick = {
+                                    cocktailName = selectionOption
+                                    nameExpanded = false
+                                    onFindCocktailsByName(selectionOption)
+                                }
+                            )
+                        }
+                    }
+                }
+            }
+            
+            Spacer(modifier = Modifier.width(8.dp))
+            
+            Button(
+                onClick = { onFindCocktailsByName(cocktailName) },
+                enabled = cocktailName.isNotBlank()
+            ) {
+                Text("Search")
+            }
+        }
         }
     }
 }

@@ -58,6 +58,16 @@ class TheCocktailDBDataSource(private val api: CocktailApiService) : CocktailDat
         }
     }
 
+    override suspend fun searchCocktailsByName(name: String): List<Cocktail> {
+        return try {
+            val response = api.searchByName(name)
+            response.drinks?.map { it.toDomainModel() } ?: emptyList()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            emptyList()
+        }
+    }
+
     private fun DrinkDto.toDomainModel(): Cocktail {
         val ingredients = listOfNotNull(
             strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5,

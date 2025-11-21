@@ -40,6 +40,10 @@ class MainActivity : ComponentActivity() {
                                 viewModel.searchCocktails(ingredients)
                                 val ingredientsString = ingredients.joinToString(",")
                                 navController.navigate("list/$ingredientsString")
+                            },
+                            onFindCocktailsByName = { name ->
+                                viewModel.searchCocktailsByName(name)
+                                navController.navigate("list/name:$name")
                             }
                         )
                     }

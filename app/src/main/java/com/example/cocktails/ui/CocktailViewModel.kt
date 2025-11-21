@@ -45,6 +45,14 @@ class CocktailViewModel : ViewModel() {
         }
     }
 
+    fun searchCocktailsByName(name: String) {
+        isLoading = true
+        viewModelScope.launch {
+            cocktails = repository.searchCocktailsByName(name)
+            isLoading = false
+        }
+    }
+
     suspend fun getCocktailById(id: String): Cocktail? {
         return repository.getCocktailById(id)
     }

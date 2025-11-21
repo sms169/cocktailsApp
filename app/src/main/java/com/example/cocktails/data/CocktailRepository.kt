@@ -22,6 +22,8 @@ class CocktailRepository {
     var currentDataSourceType: DataSourceType = DataSourceType.THE_COCKTAIL_DB
         private set
 
+    private lateinit var currentDataSource: CocktailDataSource
+
     // Cache Gemini results because we can't re-fetch by ID easily
     private val geminiCache = mutableMapOf<String, Cocktail>()
 
@@ -34,21 +36,38 @@ class CocktailRepository {
         
         theCocktailDBDataSource = TheCocktailDBDataSource(api)
         geminiDataSource = GeminiDataSource()
+
+        // Initialize currentDataSource based on the default type
+        currentDataSource = when (currentDataSourceType) {
+            DataSourceType.THE_COCKTAIL_DB -> theCocktailDBDataSource
+            DataSourceType.GEMINI -> geminiDataSource
+        }
     }
 
     fun setDataSource(type: DataSourceType) {
         currentDataSourceType = type
+        currentDataSource = when (type) {
+            DataSourceType.THE_COCKTAIL_DB -> theCocktailDBDataSource
+            DataSourceType.GEMINI -> geminiDataSource
+        }
     }
 
-    suspend fun searchCocktails(userIngredients: List<String>): List<Cocktail> {
-        return when (currentDataSourceType) {
-            DataSourceType.THE_COCKTAIL_DB -> theCocktailDBDataSource.searchCocktails(userIngredients)
-            DataSourceType.GEMINI -> {
-                val results = geminiDataSource.searchCocktails(userIngredients)
-                results.forEach { geminiCache[it.id] = it }
-                results
-            }
+    suspend fun searchCocktails(ingredients: List<String>): List<Cocktail> {
+        val results = currentDataSource.searchCocktails(ingredients)
+        // Cache Gemini results if the current source is Gemini
+        if (currentDataSourceType == DataSourceType.GEMINI) {
+            results.forEach { geminiCache[it.id] = it }
         }
+        return results
+    }
+
+    suspend fun searchCocktailsByName(name: String): List<Cocktail> {
+        val results = currentDataSource.searchCocktailsByName(name)
+        // Cache Gemini results if the current source is Gemini
+        if (currentDataSourceType == DataSourceType.GEMINI) {
+            results.forEach { geminiCache[it.id] = it }
+        }
+        return results
     }
 
     suspend fun getCocktailById(id: String): Cocktail? {
