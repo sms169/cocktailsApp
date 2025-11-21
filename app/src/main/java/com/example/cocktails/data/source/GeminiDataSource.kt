@@ -11,7 +11,7 @@ import org.json.JSONObject
 class GeminiDataSource : CocktailDataSource {
 
     // TODO: Replace with your actual API Key
-    private val apiKey = "YOUR_API_KEY_HERE" 
+    private val apiKey = "AIzaSyB0q4KCOdfeD1icNSCw1MR16--LWgw1PlM" 
     
     private val generativeModel = GenerativeModel(
         modelName = "gemini-pro",
