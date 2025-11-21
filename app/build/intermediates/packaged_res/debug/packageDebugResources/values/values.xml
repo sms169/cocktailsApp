@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Cocktail App</string>
-    <style name="Theme.Cocktails" parent="android:Theme.Material.Light.NoActionBar"/>
-</resources>
