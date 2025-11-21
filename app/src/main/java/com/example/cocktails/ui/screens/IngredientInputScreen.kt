@@ -37,6 +37,8 @@ fun IngredientInputScreen(
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+
+
             Text(
                 text = "Add up to 5 ingredients",
                 style = MaterialTheme.typography.titleMedium,
@@ -73,9 +75,10 @@ fun IngredientInputScreen(
                     if (filteredIngredients.isNotEmpty()) {
                         ExposedDropdownMenu(
                             expanded = expanded,
-                            onDismissRequest = { expanded = false }
+                            onDismissRequest = { expanded = false },
+                            modifier = Modifier.heightIn(max = 200.dp)
                         ) {
-                            filteredIngredients.take(5).forEach { selectionOption ->
+                            filteredIngredients.forEach { selectionOption ->
                                 DropdownMenuItem(
                                     text = { Text(selectionOption) },
                                     onClick = {
@@ -124,22 +127,7 @@ fun IngredientInputScreen(
                 }
             }
             
-            Spacer(modifier = Modifier.height(16.dp))
-            
-            Text("Data Source:", style = MaterialTheme.typography.labelLarge)
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                RadioButton(
-                    selected = currentDataSource == DataSourceType.THE_COCKTAIL_DB,
-                    onClick = { onDataSourceSelected(DataSourceType.THE_COCKTAIL_DB) }
-                )
-                Text("TheCocktailDB")
-                Spacer(modifier = Modifier.width(16.dp))
-                RadioButton(
-                    selected = currentDataSource == DataSourceType.GEMINI,
-                    onClick = { onDataSourceSelected(DataSourceType.GEMINI) }
-                )
-                Text("Gemini")
-            }
+
 
             Button(
                 onClick = { onFindCocktails(ingredients) },
@@ -193,9 +181,10 @@ fun IngredientInputScreen(
                 if (filteredNames.isNotEmpty()) {
                     ExposedDropdownMenu(
                         expanded = nameExpanded,
-                        onDismissRequest = { nameExpanded = false }
+                        onDismissRequest = { nameExpanded = false },
+                        modifier = Modifier.heightIn(max = 200.dp)
                     ) {
-                        filteredNames.take(5).forEach { selectionOption ->
+                        filteredNames.forEach { selectionOption ->
                             DropdownMenuItem(
                                 text = { Text(selectionOption) },
                                 onClick = {
@@ -211,6 +200,7 @@ fun IngredientInputScreen(
             
             Spacer(modifier = Modifier.width(8.dp))
             
+
             Button(
                 onClick = { onFindCocktailsByName(cocktailName) },
                 enabled = cocktailName.isNotBlank()
@@ -218,6 +208,24 @@ fun IngredientInputScreen(
                 Text("Search")
             }
         }
+
+            Spacer(modifier = Modifier.weight(1f)) // Push to bottom if needed, or just spacer
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Text("Data Source:", style = MaterialTheme.typography.labelLarge)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                RadioButton(
+                    selected = currentDataSource == DataSourceType.THE_COCKTAIL_DB,
+                    onClick = { onDataSourceSelected(DataSourceType.THE_COCKTAIL_DB) }
+                )
+                Text("TheCocktailDB")
+                Spacer(modifier = Modifier.width(16.dp))
+                RadioButton(
+                    selected = currentDataSource == DataSourceType.GEMINI,
+                    onClick = { onDataSourceSelected(DataSourceType.GEMINI) }
+                )
+                Text("Gemini")
+            }
         }
     }
 }
