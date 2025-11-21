@@ -1,15 +1,15 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-30:12
-MERGED from [androidx.compose.material3:material3:1.1.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/adb918955a91d76feab7c027dd7fafd1/transformed/jetified-material3-1.1.1/AndroidManifest.xml:17:1-22:12
+ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [androidx.navigation:navigation-common:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/79eb12e2c6a1dfad42fae9c55d3fed26/transformed/navigation-common-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/fda063f9f9b8252af5836bf588533a57/transformed/navigation-runtime-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/25540b622b42514a1f9758ab6b6b5b52/transformed/navigation-common-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f024633484e5973ffb467dece44aec3c/transformed/navigation-runtime-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-compose:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/6c15dd14ef5b9483372f5edbba71dd4b/transformed/jetified-navigation-compose-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3:1.1.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/adb918955a91d76feab7c027dd7fafd1/transformed/jetified-material3-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [io.coil-kt:coil-compose:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/c98836944469f6db2cdd7b3202193826/transformed/jetified-coil-compose-2.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [io.coil-kt:coil-compose-base:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/22f53d37ec12ef759a3f09df7422d50d/transformed/jetified-coil-compose-base-2.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/12941f292c97851b1bb9be0f124c7d66/transformed/jetified-material-ripple-release/AndroidManifest.xml:2:1-7:12
@@ -28,20 +28,19 @@ MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.0] /Users/shahr/
 MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/e26499e94a191cc2c46d99d85c5cda7c/transformed/jetified-ui-tooling-release/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/b07e2bca1abd55b7e43bdfa1ebd9ce82/transformed/jetified-ui-graphics-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/cbd7dfb315bac6185aa5d360be02e8eb/transformed/jetified-ui-test-manifest-1.5.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.30.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f0c88fe02e8269fa5ad482c86a3a72d7/transformed/jetified-accompanist-drawablepainter-0.30.1/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/83a0c52fb1fedffddc929c68d23c9842/transformed/jetified-ui-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.activity:activity:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f8847557b17906ad7b794d251db8925c/transformed/jetified-activity-1.7.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/76d5a11a419934596b1adfddc160fc4b/transformed/jetified-activity-ktx-1.7.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/eea3fe5fd7708aeac895774774b846fc/transformed/jetified-activity-compose-1.7.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/08ff6056b3974e17e64e99a4f5c25ce7/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f57859b2316c525d77ce517b999b6c43/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/a0359ab624a15f541ef988a640e06163/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ec933d8f0956c8b70d02e3bd089d155b/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/70a16690585d91db4ac626dcc2158c15/transformed/jetified-lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/8867bf93c604eac2ab05c72ff1c51067/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/0b328f159c910fab5b51935e0fa8a9b4/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ecc960e30030170d7e765194e23f3307/transformed/jetified-lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.accompanist:accompanist-drawablepainter:0.30.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f0c88fe02e8269fa5ad482c86a3a72d7/transformed/jetified-accompanist-drawablepainter-0.30.1/AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/83a0c52fb1fedffddc929c68d23c9842/transformed/jetified-ui-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.activity:activity-ktx:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/76d5a11a419934596b1adfddc160fc4b/transformed/jetified-activity-ktx-1.7.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity-compose:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/eea3fe5fd7708aeac895774774b846fc/transformed/jetified-activity-compose-1.7.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/aa4ed47f62cf217e263eb4ece84af408/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ec933d8f0956c8b70d02e3bd089d155b/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/70a16690585d91db4ac626dcc2158c15/transformed/jetified-lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [io.coil-kt:coil:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/2055c6ba704f5c76f154bf8c050c1649/transformed/jetified-coil-2.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [io.coil-kt:coil-base:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/b68fcfe1f81aa449a36d563abdd6bfb5/transformed/jetified-coil-base-2.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.ai.client.generativeai:generativeai:0.9.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/7a54e8f59c6f291f74faf04ca2eed26f/transformed/jetified-generativeai-0.9.0/AndroidManifest.xml:17:1-24:12
@@ -54,6 +53,7 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shahr
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/1e7da9eb0354b34f062d66b8afff6150/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.12.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/0a38fc0fc26a41f5980fa5c1faf60954/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/2e6a8d5188b97409148c81585dd43491/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ecc960e30030170d7e765194e23f3307/transformed/jetified-lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/d0b2e5c871a669dc11e83cedbb7db480/transformed/jetified-lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/5f90936f7726274160855eee89592db6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/9f921d6d1cdabe9155d4ae0d11b2f3ce/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:2:1-7:12
@@ -84,8 +84,8 @@ MERGED from [com.google.ai.client.generativeai:common:0.8.0] /Users/shahr/.gradl
 	android:name
 		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:7:5-28:19
-INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:7:5-28:19
+ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:7:5-29:19
+INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:7:5-29:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/e26499e94a191cc2c46d99d85c5cda7c/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/e26499e94a191cc2c46d99d85c5cda7c/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/cbd7dfb315bac6185aa5d360be02e8eb/transformed/jetified-ui-test-manifest-1.5.0/AndroidManifest.xml:22:5-26:19
@@ -115,41 +115,41 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shah
 	android:roundIcon
 		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:13:9-61
 	tools:targetApi
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:16:9-29
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:17:9-29
 	android:icon
 		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:11:9-56
 	android:allowBackup
 		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:15:9-47
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:16:9-47
+	android:enableOnBackInvokedCallback
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:15:9-51
 	android:dataExtractionRules
 		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:9:9-65
 activity#com.example.cocktails.ui.MainActivity
-ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:17:9-27:20
+ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:18:9-28:20
 	android:label
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:20:13-45
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:21:13-45
 	android:exported
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:19:13-36
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:20:13-36
 	android:theme
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:21:13-51
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:22:13-51
 	android:name
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:18:13-44
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:19:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:22:13-26:29
+ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:23:17-69
+ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:23:25-66
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:25:17-77
+ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml
 INJECTED from /Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml
-MERGED from [androidx.compose.material3:material3:1.1.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/adb918955a91d76feab7c027dd7fafd1/transformed/jetified-material3-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3:1.1.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/adb918955a91d76feab7c027dd7fafd1/transformed/jetified-material3-1.1.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/79eb12e2c6a1dfad42fae9c55d3fed26/transformed/navigation-common-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/79eb12e2c6a1dfad42fae9c55d3fed26/transformed/navigation-common-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-runtime:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/fda063f9f9b8252af5836bf588533a57/transformed/navigation-runtime-2.7.0/AndroidManifest.xml:20:5-44
@@ -160,6 +160,8 @@ MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.0] /Users/shahr/.gra
 MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f024633484e5973ffb467dece44aec3c/transformed/navigation-runtime-ktx-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-compose:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/6c15dd14ef5b9483372f5edbba71dd4b/transformed/jetified-navigation-compose-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-compose:2.7.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/6c15dd14ef5b9483372f5edbba71dd4b/transformed/jetified-navigation-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3:1.1.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/adb918955a91d76feab7c027dd7fafd1/transformed/jetified-material3-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3:1.1.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/adb918955a91d76feab7c027dd7fafd1/transformed/jetified-material3-1.1.1/AndroidManifest.xml:20:5-44
 MERGED from [io.coil-kt:coil-compose:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/c98836944469f6db2cdd7b3202193826/transformed/jetified-coil-compose-2.4.0/AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil-compose:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/c98836944469f6db2cdd7b3202193826/transformed/jetified-coil-compose-2.4.0/AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil-compose-base:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/22f53d37ec12ef759a3f09df7422d50d/transformed/jetified-coil-compose-base-2.4.0/AndroidManifest.xml:5:5-44
@@ -196,34 +198,32 @@ MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] /Users/shahr/.gradle
 MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/b07e2bca1abd55b7e43bdfa1ebd9ce82/transformed/jetified-ui-graphics-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/cbd7dfb315bac6185aa5d360be02e8eb/transformed/jetified-ui-test-manifest-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/cbd7dfb315bac6185aa5d360be02e8eb/transformed/jetified-ui-test-manifest-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.30.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f0c88fe02e8269fa5ad482c86a3a72d7/transformed/jetified-accompanist-drawablepainter-0.30.1/AndroidManifest.xml:21:5-23:42
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.30.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f0c88fe02e8269fa5ad482c86a3a72d7/transformed/jetified-accompanist-drawablepainter-0.30.1/AndroidManifest.xml:21:5-23:42
+MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/83a0c52fb1fedffddc929c68d23c9842/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/83a0c52fb1fedffddc929c68d23c9842/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f8847557b17906ad7b794d251db8925c/transformed/jetified-activity-1.7.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f8847557b17906ad7b794d251db8925c/transformed/jetified-activity-1.7.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/76d5a11a419934596b1adfddc160fc4b/transformed/jetified-activity-ktx-1.7.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/76d5a11a419934596b1adfddc160fc4b/transformed/jetified-activity-ktx-1.7.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/eea3fe5fd7708aeac895774774b846fc/transformed/jetified-activity-compose-1.7.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/eea3fe5fd7708aeac895774774b846fc/transformed/jetified-activity-compose-1.7.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/08ff6056b3974e17e64e99a4f5c25ce7/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/08ff6056b3974e17e64e99a4f5c25ce7/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f57859b2316c525d77ce517b999b6c43/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f57859b2316c525d77ce517b999b6c43/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/a0359ab624a15f541ef988a640e06163/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/a0359ab624a15f541ef988a640e06163/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ec933d8f0956c8b70d02e3bd089d155b/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ec933d8f0956c8b70d02e3bd089d155b/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/70a16690585d91db4ac626dcc2158c15/transformed/jetified-lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/70a16690585d91db4ac626dcc2158c15/transformed/jetified-lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/8867bf93c604eac2ab05c72ff1c51067/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/8867bf93c604eac2ab05c72ff1c51067/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/0b328f159c910fab5b51935e0fa8a9b4/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/0b328f159c910fab5b51935e0fa8a9b4/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ecc960e30030170d7e765194e23f3307/transformed/jetified-lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ecc960e30030170d7e765194e23f3307/transformed/jetified-lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.accompanist:accompanist-drawablepainter:0.30.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f0c88fe02e8269fa5ad482c86a3a72d7/transformed/jetified-accompanist-drawablepainter-0.30.1/AndroidManifest.xml:21:5-23:42
-MERGED from [com.google.accompanist:accompanist-drawablepainter:0.30.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/f0c88fe02e8269fa5ad482c86a3a72d7/transformed/jetified-accompanist-drawablepainter-0.30.1/AndroidManifest.xml:21:5-23:42
-MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/83a0c52fb1fedffddc929c68d23c9842/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/83a0c52fb1fedffddc929c68d23c9842/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/76d5a11a419934596b1adfddc160fc4b/transformed/jetified-activity-ktx-1.7.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-ktx:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/76d5a11a419934596b1adfddc160fc4b/transformed/jetified-activity-ktx-1.7.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-compose:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/eea3fe5fd7708aeac895774774b846fc/transformed/jetified-activity-compose-1.7.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-compose:1.7.2] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/eea3fe5fd7708aeac895774774b846fc/transformed/jetified-activity-compose-1.7.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/aa4ed47f62cf217e263eb4ece84af408/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/aa4ed47f62cf217e263eb4ece84af408/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ec933d8f0956c8b70d02e3bd089d155b/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ec933d8f0956c8b70d02e3bd089d155b/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/70a16690585d91db4ac626dcc2158c15/transformed/jetified-lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/70a16690585d91db4ac626dcc2158c15/transformed/jetified-lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [io.coil-kt:coil:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/2055c6ba704f5c76f154bf8c050c1649/transformed/jetified-coil-2.4.0/AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/2055c6ba704f5c76f154bf8c050c1649/transformed/jetified-coil-2.4.0/AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil-base:2.4.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/b68fcfe1f81aa449a36d563abdd6bfb5/transformed/jetified-coil-base-2.4.0/AndroidManifest.xml:5:5-44
@@ -248,6 +248,8 @@ MERGED from [androidx.core:core:1.12.0] /Users/shahr/.gradle/caches/9.0-mileston
 MERGED from [androidx.core:core:1.12.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/0a38fc0fc26a41f5980fa5c1faf60954/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/2e6a8d5188b97409148c81585dd43491/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/2e6a8d5188b97409148c81585dd43491/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ecc960e30030170d7e765194e23f3307/transformed/jetified-lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/ecc960e30030170d7e765194e23f3307/transformed/jetified-lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/d0b2e5c871a669dc11e83cedbb7db480/transformed/jetified-lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/d0b2e5c871a669dc11e83cedbb7db480/transformed/jetified-lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/5f90936f7726274160855eee89592db6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44

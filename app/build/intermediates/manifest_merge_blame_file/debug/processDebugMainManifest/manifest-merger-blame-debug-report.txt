@@ -24,7 +24,7 @@
 17-->[androidx.core:core:1.12.0] /Users/shahr/.gradle/caches/9.0-milestone-1/transforms/0a38fc0fc26a41f5980fa5c1faf60954/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:7:5-28:19
+19-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:7:5-29:19
 20        android:allowBackup="true"
 20-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:8:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -32,39 +32,40 @@
 22        android:dataExtractionRules="@xml/data_extraction_rules"
 22-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:9:9-65
 23        android:debuggable="true"
-24        android:extractNativeLibs="false"
-25        android:fullBackupContent="@xml/backup_rules"
-25-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:10:9-54
-26        android:icon="@drawable/ic_launcher_foreground"
-26-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:11:9-56
-27        android:label="@string/app_name"
-27-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:12:9-41
-28        android:roundIcon="@drawable/ic_launcher_foreground"
-28-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:13:9-61
-29        android:supportsRtl="true"
-29-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:14:9-35
-30        android:testOnly="true"
+24        android:enableOnBackInvokedCallback="true"
+24-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:15:9-51
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:10:9-54
+27        android:icon="@drawable/ic_launcher_foreground"
+27-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:11:9-56
+28        android:label="@string/app_name"
+28-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:12:9-41
+29        android:roundIcon="@drawable/ic_launcher_foreground"
+29-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:13:9-61
+30        android:supportsRtl="true"
+30-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:14:9-35
 31        android:theme="@style/Theme.Cocktails" >
-31-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:15:9-47
+31-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:16:9-47
 32        <activity
-32-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:17:9-27:20
+32-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:18:9-28:20
 33            android:name="com.example.cocktails.ui.MainActivity"
-33-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:18:13-44
+33-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:19:13-44
 34            android:exported="true"
-34-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:19:13-36
+34-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:20:13-36
 35            android:label="@string/app_name"
-35-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:20:13-45
+35-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:21:13-45
 36            android:theme="@style/Theme.Cocktails" >
-36-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:21:13-51
+36-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:22:13-51
 37            <intent-filter>
-37-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:22:13-26:29
+37-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:23:13-27:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:23:17-69
-38-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:23:25-66
+38-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:24:17-69
+38-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:24:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:25:17-77
-40-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:25:27-74
+40-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:26:17-77
+40-->/Users/shahr/Projects/shahr-test-antigravity/app/src/main/AndroidManifest.xml:26:27-74
 41            </intent-filter>
 42        </activity>
 43        <activity

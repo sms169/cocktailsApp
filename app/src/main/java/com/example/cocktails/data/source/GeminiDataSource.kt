@@ -14,7 +14,7 @@ class GeminiDataSource : CocktailDataSource {
     private val apiKey = "AIzaSyB0q4KCOdfeD1icNSCw1MR16--LWgw1PlM" 
     
     private val generativeModel = GenerativeModel(
-        modelName = "gemini-pro",
+        modelName = "gemini-2.5-flash",
         apiKey = apiKey
     )
 

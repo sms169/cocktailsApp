@@ -8,8 +8,6 @@ import androidx.compose.runtime.*
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.cocktails.data.CocktailRepository
-import com.example.cocktails.data.DataSourceType
 import com.example.cocktails.ui.screens.CocktailDetailScreen
 import com.example.cocktails.ui.screens.CocktailListScreen
 import com.example.cocktails.ui.screens.IngredientInputScreen
@@ -21,40 +19,25 @@ class MainActivity : ComponentActivity() {
         setContent {
             CocktailAppTheme {
                 val navController = rememberNavController()
-                val repository = remember { CocktailRepository() }
+                val viewModel: CocktailViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 
                 NavHost(navController = navController, startDestination = "input") {
                     composable("input") {
-                        var currentDataSource by remember { mutableStateOf(DataSourceType.THE_COCKTAIL_DB) }
-                        
                         IngredientInputScreen(
-                            currentDataSource = currentDataSource,
-                            onDataSourceSelected = { 
-                                currentDataSource = it
-                                repository.setDataSource(it)
-                            },
+                            currentDataSource = viewModel.currentDataSource,
+                            onDataSourceSelected = { viewModel.setDataSource(it) },
                             onFindCocktails = { ingredients ->
+                                viewModel.searchCocktails(ingredients)
                                 val ingredientsString = ingredients.joinToString(",")
                                 navController.navigate("list/$ingredientsString")
                             }
                         )
                     }
                     composable("list/{ingredients}") { backStackEntry ->
-                        val ingredientsString = backStackEntry.arguments?.getString("ingredients") ?: ""
-                        val ingredients = ingredientsString.split(",").filter { it.isNotEmpty() }
+                        // We trigger search in the input screen, but just in case of deep link or direct nav, we could check here.
+                        // For now, we rely on the ViewModel state.
                         
-                        // State to hold the list of cocktails
-                        var cocktails by remember { mutableStateOf<List<com.example.cocktails.model.Cocktail>>(emptyList()) }
-                        var isLoading by remember { mutableStateOf(true) }
-
-                        // Fetch cocktails when ingredients change
-                        LaunchedEffect(ingredients) {
-                            isLoading = true
-                            cocktails = repository.searchCocktails(ingredients)
-                            isLoading = false
-                        }
-
-                        if (isLoading) {
+                        if (viewModel.isLoading) {
                             androidx.compose.foundation.layout.Box(
                                 modifier = androidx.compose.ui.Modifier.fillMaxSize(),
                                 contentAlignment = androidx.compose.ui.Alignment.Center
@@ -63,7 +46,7 @@ class MainActivity : ComponentActivity() {
                             }
                         } else {
                             CocktailListScreen(
-                                cocktails = cocktails,
+                                cocktails = viewModel.cocktails,
                                 onCocktailClick = { cocktailId ->
                                     navController.navigate("detail/$cocktailId")
                                 },
@@ -77,7 +60,7 @@ class MainActivity : ComponentActivity() {
                         
                         LaunchedEffect(cocktailId) {
                             if (cocktailId != null) {
-                                cocktail = repository.getCocktailById(cocktailId)
+                                cocktail = viewModel.getCocktailById(cocktailId)
                             }
                         }
 
