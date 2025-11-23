@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -18,6 +21,14 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        
+        val secretsPropertiesFile = rootProject.file("secrets.properties")
+        val secretsProperties = Properties()
+        if (secretsPropertiesFile.exists()) {
+            secretsProperties.load(FileInputStream(secretsPropertiesFile))
+        }
+        
+        buildConfigField("String", "GEMINI_API_KEY", "\"${secretsProperties.getProperty("GEMINI_API_KEY")}\"")
     }
 
     buildTypes {
@@ -38,6 +49,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.11"

@@ -7,11 +7,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
+import com.example.cocktails.BuildConfig
 
 class GeminiDataSource : CocktailDataSource {
 
     // TODO: Replace with your actual API Key
-    private val apiKey = "AIzaSyB0q4KCOdfeD1icNSCw1MR16--LWgw1PlM" 
+    private val apiKey = BuildConfig.GEMINI_API_KEY 
     
     private val generativeModel = GenerativeModel(
         modelName = "gemini-2.5-flash",
