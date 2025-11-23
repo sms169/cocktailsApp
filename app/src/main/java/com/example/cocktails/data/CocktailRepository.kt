@@ -35,7 +35,7 @@ class CocktailRepository {
         val api = retrofit.create(CocktailApiService::class.java)
         
         theCocktailDBDataSource = TheCocktailDBDataSource(api)
-        geminiDataSource = GeminiDataSource()
+        geminiDataSource = GeminiDataSource(api)
 
         // Initialize currentDataSource based on the default type
         currentDataSource = when (currentDataSourceType) {
