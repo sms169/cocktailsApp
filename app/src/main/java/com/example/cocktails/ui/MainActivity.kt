@@ -14,6 +14,7 @@ import com.example.cocktails.ui.screens.CocktailListScreen
 import com.example.cocktails.ui.screens.IngredientInputScreen
 import com.example.cocktails.ui.screens.SplashScreen
 import com.example.cocktails.ui.theme.CocktailAppTheme
+import androidx.compose.material3.*
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -88,6 +89,9 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable("input") {
+                            LaunchedEffect(Unit) {
+                                viewModel.logEvent("screen_view", mapOf("screen_name" to "IngredientInput"))
+                            }
                             IngredientInputScreen(
                                 currentDataSource = viewModel.currentDataSource,
                                 onDataSourceSelected = { viewModel.setDataSource(it) },
@@ -103,15 +107,22 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable("favorites") {
+                            LaunchedEffect(Unit) {
+                                viewModel.logEvent("screen_view", mapOf("screen_name" to "Favorites"))
+                            }
                             com.example.cocktails.ui.screens.FavoritesScreen(
                                 favorites = favorites,
                                 onCocktailClick = { cocktailId ->
+                                    viewModel.logEvent("click_cocktail", mapOf("cocktail_id" to cocktailId, "screen" to "Favorites"))
                                     navController.navigate("detail/$cocktailId")
                                 },
                                 onToggleFavorite = { viewModel.toggleFavorite(it) }
                             )
                         }
                         composable("list/{ingredients}") { backStackEntry ->
+                            LaunchedEffect(Unit) {
+                                viewModel.logEvent("screen_view", mapOf("screen_name" to "CocktailList"))
+                            }
                             if (viewModel.isLoading) {
                                 androidx.compose.foundation.layout.Box(
                                     modifier = androidx.compose.ui.Modifier.fillMaxSize(),
@@ -124,6 +135,7 @@ class MainActivity : ComponentActivity() {
                                     cocktails = viewModel.cocktails,
                                     favoriteIds = favoriteIds,
                                     onCocktailClick = { cocktailId ->
+                                        viewModel.logEvent("click_cocktail", mapOf("cocktail_id" to cocktailId, "screen" to "CocktailList"))
                                         navController.navigate("detail/$cocktailId")
                                     },
                                     onToggleFavorite = { viewModel.toggleFavorite(it) },
@@ -137,13 +149,17 @@ class MainActivity : ComponentActivity() {
                             
                             LaunchedEffect(cocktailId) {
                                 if (cocktailId != null) {
+                                    viewModel.logEvent("screen_view", mapOf("screen_name" to "CocktailDetail", "cocktail_id" to cocktailId))
                                     cocktail = viewModel.getCocktailById(cocktailId)
                                 }
                             }
     
                             if (cocktail != null) {
+                                val isFavorite by viewModel.isFavoriteFlow(cocktail!!.id).collectAsState()
                                 CocktailDetailScreen(
                                     cocktail = cocktail!!,
+                                    isFavorite = isFavorite,
+                                    onToggleFavorite = { viewModel.toggleFavorite(cocktail!!) },
                                     onBack = { navController.popBackStack() }
                                 )
                             } else {

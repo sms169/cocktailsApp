@@ -8,15 +8,16 @@ import com.example.cocktails.model.Cocktail
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-enum class DataSourceType {
-    THE_COCKTAIL_DB,
-    GEMINI
-}
 
 import com.example.cocktails.data.db.CocktailDao
 import com.example.cocktails.data.db.CocktailEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+
+enum class DataSourceType {
+    THE_COCKTAIL_DB,
+    GEMINI
+}
 
 class CocktailRepository(private val cocktailDao: CocktailDao) {
 
