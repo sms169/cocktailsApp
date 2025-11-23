@@ -69,11 +69,30 @@ class TheCocktailDBDataSource(private val api: CocktailApiService) : CocktailDat
     }
 
     private fun DrinkDto.toDomainModel(): Cocktail {
-        val ingredients = listOfNotNull(
-            strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5,
-            strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10,
-            strIngredient11, strIngredient12, strIngredient13, strIngredient14, strIngredient15
-        ).filter { it.isNotBlank() }
+        val rawIngredients = listOf(
+            strIngredient1 to strMeasure1,
+            strIngredient2 to strMeasure2,
+            strIngredient3 to strMeasure3,
+            strIngredient4 to strMeasure4,
+            strIngredient5 to strMeasure5,
+            strIngredient6 to strMeasure6,
+            strIngredient7 to strMeasure7,
+            strIngredient8 to strMeasure8,
+            strIngredient9 to strMeasure9,
+            strIngredient10 to strMeasure10,
+            strIngredient11 to strMeasure11,
+            strIngredient12 to strMeasure12,
+            strIngredient13 to strMeasure13,
+            strIngredient14 to strMeasure14,
+            strIngredient15 to strMeasure15
+        )
+
+        val ingredients = rawIngredients.mapNotNull { (ingredient, measure) ->
+            if (!ingredient.isNullOrBlank()) {
+                val qty = measure?.trim() ?: ""
+                if (qty.isNotEmpty()) "$qty ${ingredient.trim()}" else ingredient.trim()
+            } else null
+        }
 
         return Cocktail(
             id = id,

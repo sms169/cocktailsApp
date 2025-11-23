@@ -28,7 +28,7 @@ class GeminiDataSource : CocktailDataSource {
             Each object must have these fields:
             - id: a unique string id (e.g. "gemini_1")
             - name: string
-            - ingredients: array of strings
+            - ingredients: array of strings, where each string includes the quantity in oz (e.g. "2 oz Vodka", "1 oz Lime Juice")
             - calories: integer (estimate)
             - description: string (short instructions)
             - history: string (brief history or fun fact)
@@ -53,7 +53,7 @@ class GeminiDataSource : CocktailDataSource {
             Find cocktail recipes that match the name "$name".
             For the cocktail, provide:
             - Name
-            - List of ingredients with measurements
+            - List of ingredients with measurements in oz (e.g. "2 oz Gin")
             - Instructions
             - Estimated calories (integer)
             - A short history or fun fact (1-2 sentences)
