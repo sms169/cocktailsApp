@@ -13,7 +13,12 @@ enum class DataSourceType {
     GEMINI
 }
 
-class CocktailRepository {
+import com.example.cocktails.data.db.CocktailDao
+import com.example.cocktails.data.db.CocktailEntity
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
+
+class CocktailRepository(private val cocktailDao: CocktailDao) {
 
     private val theCocktailDBDataSource: TheCocktailDBDataSource
     private val geminiDataSource: GeminiDataSource
@@ -75,5 +80,22 @@ class CocktailRepository {
             DataSourceType.THE_COCKTAIL_DB -> theCocktailDBDataSource.getCocktailById(id)
             DataSourceType.GEMINI -> geminiCache[id]
         }
+    }
+
+    // Favorites
+    val favorites: Flow<List<Cocktail>> = cocktailDao.getFavorites().map { entities ->
+        entities.map { it.toDomainModel() }
+    }
+
+    suspend fun addToFavorites(cocktail: Cocktail) {
+        cocktailDao.insert(CocktailEntity.fromDomainModel(cocktail))
+    }
+
+    suspend fun removeFromFavorites(cocktail: Cocktail) {
+        cocktailDao.delete(CocktailEntity.fromDomainModel(cocktail))
+    }
+
+    fun isFavorite(id: String): Flow<Boolean> {
+        return cocktailDao.isFavorite(id)
     }
 }

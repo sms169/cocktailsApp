@@ -10,9 +10,27 @@ import com.example.cocktails.data.DataSourceType
 import com.example.cocktails.model.Cocktail
 import kotlinx.coroutines.launch
 
-class CocktailViewModel : ViewModel() {
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
+import androidx.room.Room
+import com.example.cocktails.data.CocktailRepository
+import com.example.cocktails.data.DataSourceType
+import com.example.cocktails.data.db.AppDatabase
+import com.example.cocktails.model.Cocktail
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
-    private val repository = CocktailRepository()
+class CocktailViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val database = Room.databaseBuilder(
+        application,
+        AppDatabase::class.java, "cocktails-db"
+    ).build()
+
+    private val repository = CocktailRepository(database.cocktailDao())
 
     var cocktails by mutableStateOf<List<Cocktail>>(emptyList())
         private set
@@ -25,6 +43,9 @@ class CocktailViewModel : ViewModel() {
 
     // Cache the last search ingredients to avoid re-fetching
     private var lastIngredients: List<String> = emptyList()
+
+    val favorites: StateFlow<List<Cocktail>> = repository.favorites
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     fun setDataSource(type: DataSourceType) {
         currentDataSource = type
@@ -55,5 +76,24 @@ class CocktailViewModel : ViewModel() {
 
     suspend fun getCocktailById(id: String): Cocktail? {
         return repository.getCocktailById(id)
+    }
+
+    fun toggleFavorite(cocktail: Cocktail) {
+        viewModelScope.launch {
+            if (isFavorite(cocktail.id)) {
+                repository.removeFromFavorites(cocktail)
+            } else {
+                repository.addToFavorites(cocktail)
+            }
+        }
+    }
+
+    private fun isFavorite(id: String): Boolean {
+        return favorites.value.any { it.id == id }
+    }
+    
+    fun isFavoriteFlow(id: String): StateFlow<Boolean> {
+         return repository.isFavorite(id)
+             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
     }
 }

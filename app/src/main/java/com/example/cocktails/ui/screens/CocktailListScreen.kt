@@ -6,6 +6,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,7 +21,9 @@ import com.example.cocktails.model.Cocktail
 @Composable
 fun CocktailListScreen(
     cocktails: List<Cocktail>,
+    favoriteIds: Set<String>,
     onCocktailClick: (String) -> Unit,
+    onToggleFavorite: (Cocktail) -> Unit,
     onBack: () -> Unit
 ) {
     Scaffold(
@@ -48,7 +52,12 @@ fun CocktailListScreen(
                 modifier = Modifier.padding(paddingValues)
             ) {
                 items(cocktails) { cocktail ->
-                    CocktailItem(cocktail = cocktail, onClick = { onCocktailClick(cocktail.id) })
+                    CocktailItem(
+                        cocktail = cocktail,
+                        isFavorite = favoriteIds.contains(cocktail.id),
+                        onClick = { onCocktailClick(cocktail.id) },
+                        onToggleFavorite = { onToggleFavorite(cocktail) }
+                    )
                 }
             }
         }
@@ -56,7 +65,12 @@ fun CocktailListScreen(
 }
 
 @Composable
-fun CocktailItem(cocktail: Cocktail, onClick: () -> Unit) {
+fun CocktailItem(
+    cocktail: Cocktail,
+    isFavorite: Boolean,
+    onClick: () -> Unit,
+    onToggleFavorite: () -> Unit
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -75,13 +89,20 @@ fun CocktailItem(cocktail: Cocktail, onClick: () -> Unit) {
                 contentScale = ContentScale.Crop
             )
             Spacer(modifier = Modifier.width(16.dp))
-            Column {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(text = cocktail.name, style = MaterialTheme.typography.titleMedium)
                 Text(text = "Rating: ${cocktail.rating}", style = MaterialTheme.typography.bodyMedium)
                 Text(
                     text = cocktail.ingredients.take(3).joinToString(", "),
                     style = MaterialTheme.typography.bodySmall,
                     maxLines = 1
+                )
+            }
+            IconButton(onClick = onToggleFavorite) {
+                Icon(
+                    imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                    contentDescription = if (isFavorite) "Remove from favorites" else "Add to favorites",
+                    tint = if (isFavorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
                 )
             }
         }
